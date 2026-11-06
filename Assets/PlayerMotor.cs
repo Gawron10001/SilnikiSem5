@@ -8,6 +8,8 @@ public class PlayerMotor : MonoBehaviour
     public float JumpForce = 10.0f;
     private Vector2 direction;
     private Rigidbody2D rigidbody2D;
+    public int maxJump = 1;
+    private int currentJump;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,6 +34,10 @@ public class PlayerMotor : MonoBehaviour
 
     void OnJump()
     {
-        rigidbody2D.AddForce(Vector2.up * JumpForce,ForceMode2D.Impulse);
+        if (currentJump < maxJump)
+        {
+            rigidbody2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            ++currentJump;
+        }
     }
 }

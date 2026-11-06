@@ -609,6 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   Acceleration: 10
   JumpForce: 10
+  maxJump: 2
 --- !u!114 &1976195038
 MonoBehaviour:
   m_ObjectHideFlags: 0
